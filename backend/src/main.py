@@ -10,7 +10,9 @@ from contextlib import asynccontextmanager
 from config.settings import get_settings
 from config.logger import setup_logger
 from config.database import init_db
+from concorrencia.workers import start_worker, stop_worker
 import core.models  # garante que todos os models são registrados no Base.metadata
+from core.routers import appointments, doctors, patients, reports, system
 
 settings = get_settings()
 logger = setup_logger(__name__)
@@ -25,8 +27,11 @@ async def lifespan(app: FastAPI):
     logger.info(f"Banco de dados : {settings.DATABASE_URL}")
     await init_db()
     logger.info("Tabelas criadas/verificadas com sucesso.")
+    start_worker()
+    logger.info("Worker de background iniciado.")
     yield
     logger.info("Encerrando sistema de agendamento.")
+    stop_worker()
 
 
 app = FastAPI(
@@ -43,6 +48,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ── Registrar routers ────────────────────────────────────────────────────────
+app.include_router(appointments.router)
+app.include_router(doctors.router)
+app.include_router(patients.router)
+app.include_router(reports.router)
+app.include_router(system.router)
 
 
 @app.get("/", tags=["health"])

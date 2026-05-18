@@ -1,0 +1,37 @@
+INFO:     Will watch for changes in these directories: ['D:\\study\\Sistema-de-Agendamento\\backend']
+[SO] Sistema Operacional: Windows 10.0.26200
+[SO] Encoding padrão:     utf-8-sig
+[SO] Diretório base:      D:\study\Sistema-de-Agendamento\backend
+[DB] Banco de dados:      sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+[API] Iniciando em http://0.0.0.0:8000
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [31212] using WatchFiles
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-18 15:28:20 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+INFO:     Started server process [34140]
+INFO:     Waiting for application startup.
+2026-05-18 15:28:20 | INFO     | main | Iniciando sistema de agendamento...
+2026-05-18 15:28:20 | INFO     | main | SO detectado   : Windows
+2026-05-18 15:28:20 | INFO     | main | Diretório base : D:\study\Sistema-de-Agendamento\backend
+2026-05-18 15:28:20 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-18 15:28:20,739 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-05-18 15:28:20,739 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("patients")
+2026-05-18 15:28:20,739 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-05-18 15:28:20,739 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("doctors")
+2026-05-18 15:28:20,740 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-05-18 15:28:20,740 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("appointments")
+2026-05-18 15:28:20,740 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-05-18 15:28:20,741 INFO sqlalchemy.engine.Engine COMMIT
+2026-05-18 15:28:20 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-18 15:28:20 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-18 15:28:20 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=8276)
+2026-05-18 15:28:20 | INFO     | main | Worker de background iniciado.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52756 - "GET /system/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52757 - "GET /system/threads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65375 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65379 - "GET /system/info HTTP/1.1" 200 OK
