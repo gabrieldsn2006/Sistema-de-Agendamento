@@ -10,9 +10,14 @@ from contextlib import asynccontextmanager
 from config.settings import get_settings
 from config.logger import setup_logger
 from config.database import init_db
+from config.platform_info import log_platform_startup
+import core.models
+
+from core.routers import patients, doctors, appointments
+from core.routers.system import router as system_router
+from core.routers.reports import router as reports_router
+from core.errors import register_error_handlers
 from concorrencia.workers import start_worker, stop_worker
-import core.models  # garante que todos os models são registrados no Base.metadata
-from core.routers import appointments, doctors, patients, reports, system
 
 settings = get_settings()
 logger = setup_logger(__name__)
@@ -20,18 +25,14 @@ logger = setup_logger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Gerencia ciclo de vida da aplicação (startup / shutdown)."""
-    logger.info("Iniciando sistema de agendamento...")
-    logger.info(f"SO detectado   : {settings.OS_NAME}")
-    logger.info(f"Diretório base : {settings.BASE_DIR}")
+    log_platform_startup()
     logger.info(f"Banco de dados : {settings.DATABASE_URL}")
     await init_db()
     logger.info("Tabelas criadas/verificadas com sucesso.")
     start_worker()
-    logger.info("Worker de background iniciado.")
     yield
-    logger.info("Encerrando sistema de agendamento.")
     stop_worker()
+    logger.info("Encerrando sistema de agendamento.")
 
 
 app = FastAPI(
@@ -49,29 +50,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Registrar routers ────────────────────────────────────────────────────────
-app.include_router(appointments.router)
-app.include_router(doctors.router)
+register_error_handlers(app)
+
 app.include_router(patients.router)
-app.include_router(reports.router)
-app.include_router(system.router)
+app.include_router(doctors.router)
+app.include_router(appointments.router)
+app.include_router(system_router)
+app.include_router(reports_router)
 
 
 @app.get("/", tags=["health"])
 async def root():
-    return {
-        "status": "online",
-        "sistema": "Agendamento de Consultas Médicas",
-        "versao": "1.0.0",
-    }
+    return {"status": "online", "sistema": "Agendamento de Consultas Médicas", "versao": "1.0.0"}
 
 
 @app.get("/health", tags=["health"])
 async def health_check():
     return {"status": "ok"}
-
-
-@app.get("/info", tags=["health"])
-async def system_info():
-    """Expõe informações do SO e ambiente (útil para o relatório técnico)."""
-    return settings.info()
