@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedAgenda — Consultas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-navbar">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+          <span class="logo-dot"></span>
+          MedAgenda
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/">Pacientes</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/medicos.html">Médicos</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item active" href="/consultas.html">Consultas</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/relatorios.html">Relatórios</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="container-xl py-4">
+
+      <!-- PAGE HEADER -->
+      <div class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3">
+        <div>
+          <h1 class="page-title mb-1">Gestão de <span class="text-accent">Consultas</span></h1>
+          <p class="text-muted mb-0 small">Agende, edite e gerencie as consultas médicas</p>
+        </div>
+        <button class="btn btn-primary-custom" id="btn-novo">
+          <span>＋</span> Nova Consulta
+        </button>
+      </div>
+
+      <!-- STATS -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Total</div>
+            <div class="stat-value text-accent" id="stat-total">—</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Agendadas</div>
+            <div class="stat-value" style="color:#3b82f6" id="stat-scheduled">—</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Concluídas</div>
+            <div class="stat-value" style="color:#22c55e" id="stat-completed">—</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Canceladas</div>
+            <div class="stat-value" style="color:#ef4444" id="stat-cancelled">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="d-flex gap-2 mb-3 flex-wrap">
+        <div class="search-wrap flex-grow-1">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="form-control custom-input ps-5" id="search"
+            placeholder="Buscar por paciente, médico ou especialidade…" />
+        </div>
+        <select class="form-select custom-input" id="filter-status" style="max-width:180px">
+          <option value="">Todos os status</option>
+          <option value="scheduled">Agendadas</option>
+          <option value="completed">Concluídas</option>
+          <option value="cancelled">Canceladas</option>
+        </select>
+        <button class="btn btn-outline-custom" id="btn-refresh">↺ Atualizar</button>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-wrap">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Paciente</th>
+              <th>Médico</th>
+              <th>Especialidade</th>
+              <th>Data / Hora</th>
+              <th>Status</th>
+              <th>Observações</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="appointments-tbody">
+            <tr>
+              <td colspan="8" class="text-center py-4 text-muted">
+                <div class="spinner-border spinner-border-sm text-accent me-2"></div>
+                Carregando consultas…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <!-- MODAL CRIAR / EDITAR -->
+    <div class="modal fade" id="formModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content custom-modal">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title syne" id="modal-title">Nova Consulta</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="appointment-form">
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label class="form-label custom-label">Paciente *</label>
+                  <select class="form-select custom-input" id="f-patient" required>
+                    <option value="">Selecione o paciente…</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label custom-label">Médico *</label>
+                  <select class="form-select custom-input" id="f-doctor" required>
+                    <option value="">Selecione o médico…</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label custom-label">Data *</label>
+                  <input type="date" class="form-control custom-input" id="f-date" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label custom-label">Horário *</label>
+                  <input type="time" class="form-control custom-input" id="f-time" required />
+                </div>
+
+                <!-- Status só aparece na edição -->
+                <div class="col-md-6 d-none" id="status-group">
+                  <label class="form-label custom-label">Status</label>
+                  <select class="form-select custom-input" id="f-status">
+                    <option value="scheduled">Agendada</option>
+                    <option value="completed">Concluída</option>
+                    <option value="cancelled">Cancelada</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label custom-label">Observações</label>
+                  <textarea class="form-control custom-input" id="f-notes"
+                    placeholder="Informações adicionais sobre a consulta…"
+                    rows="3" maxlength="500" style="resize:vertical"></textarea>
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary-custom" id="submit-btn">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CONFIRMAR EXCLUSÃO -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content custom-modal text-center">
+          <div class="modal-body py-4">
+            <div class="fs-1 mb-2">🗑️</div>
+            <h6 class="syne mb-1" id="confirm-label">—</h6>
+            <p class="text-muted small mb-0">Essa ação não pode ser desfeita.</p>
+          </div>
+          <div class="modal-footer border-0 justify-content-center gap-2 pt-0">
+            <button class="btn btn-outline-custom btn-sm" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-danger-custom btn-sm" id="confirm-delete-btn">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container"></div>
+
+    <script type="module" src="/src/consultas.js"></script>
+  </body>
+</html>

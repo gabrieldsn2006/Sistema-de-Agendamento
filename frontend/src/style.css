@@ -270,3 +270,64 @@ body {
   font-size: .75rem;
   font-weight: 500;
 }
+
+
+
+/* Consultas details*/
+.badge-status {
+  border-radius: 99px;
+  padding: .2rem .65rem;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.form-select.custom-input option {
+  background: #0f1218;
+  color: #e8eaf0;
+}
+
+textarea.custom-input {
+  min-height: 80px;
+}
+
+/* ── REPORT CARDS ── */
+.report-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  transition: border-color .2s;
+}
+.report-card:hover { border-color: rgba(59,130,246,.3); }
+ 
+.report-card-icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+ 
+.report-card-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  margin-bottom: .25rem;
+}
+ 
+.report-card-desc {
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+ 
+.progress-area {
+  margin-top: .75rem;
+  padding: .75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}

@@ -140,3 +140,41 @@
 2026-05-19 15:14:02 | INFO     | core.routers.patients | Paciente atualizado: id=1
 2026-05-19 15:15:35 | INFO     | core.routers.patients | Paciente criado: id=2 cpf=712.341.922-54
 2026-05-19 15:17:16 | INFO     | core.routers.doctors | Médico criado: id=2 crm=2411034
+2026-05-19 15:31:28 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:31:28 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:31:28 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:31:30 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:31:30 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:31:30 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] Sistema  : Windows 11
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] PID      : 14972 (PPID=16672)
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] CPUs     : 16
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-19 15:31:30 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-19 15:31:30 | INFO     | main | Banco de dados : sqlite:///C:\Users\User\Documents\5o Semestre\Sistemas Operacionais\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-19 15:31:30 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-19 15:31:30 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-19 15:31:30 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=2724)
+2026-05-19 17:18:00 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 17:18:00 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 17:18:00 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 17:18:02 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 17:18:02 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 17:18:02 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] Sistema  : Windows 11
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] PID      : 21204 (PPID=21876)
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] CPUs     : 16
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-19 17:18:02 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-19 17:18:02 | INFO     | main | Banco de dados : sqlite:///C:\Users\User\Documents\5o Semestre\Sistemas Operacionais\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-19 17:18:02 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-19 17:18:02 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-19 17:18:02 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=24628)
+2026-05-19 18:06:49 | INFO     | core.routers.appointments | Consulta criada: id=1 doctor=2 patient=2 at=2026-12-20 02:00:00-03:00
+2026-05-19 18:07:12 | INFO     | core.routers.appointments | Consulta atualizada: id=1
+2026-05-19 18:22:13 | INFO     | reports.report_service | [RELATÓRIO] CSV enfileirado: task_id=4b617b01, 1 registros
+2026-05-19 18:22:13 | INFO     | reports.csv_report | [CSV] Gerado: relatorio_geral_20260519_212213.csv (393 bytes, 1 registros)
+2026-05-19 18:26:06 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=af2ddab5 médico='Dr Healer Demon'
+2026-05-19 18:26:07 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Healer_Demon_20260519_212607.pdf (2 KB, 0 consultas)
