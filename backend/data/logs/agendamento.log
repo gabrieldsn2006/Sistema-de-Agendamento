@@ -85,3 +85,58 @@
 2026-05-18 20:08:17 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=25220)
 2026-05-18 21:46:06 | INFO     | core.routers.patients | Paciente criado: id=1 cpf=256.697.934-87
 2026-05-18 22:20:37 | INFO     | core.routers.doctors | Médico criado: id=1 crm=CRM/CE 1984
+2026-05-19 15:09:45 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:09:45 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:09:45 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:09:46 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:09:46 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:09:46 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] PID      : 5328 (PPID=43772)
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-19 15:09:46 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-19 15:09:46 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-19 15:09:46 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-19 15:09:46 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-19 15:09:46 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=22712)
+2026-05-19 15:11:27 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-19 15:11:27 | INFO     | concorrencia.workers | [WORKER] Thread de background encerrada.
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:11:48 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] PID      : 14552 (PPID=1144)
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-19 15:11:48 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-19 15:11:48 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-19 15:11:48 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-19 15:11:48 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-19 15:11:48 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=31408)
+2026-05-19 15:11:50 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-19 15:11:50 | INFO     | concorrencia.workers | [WORKER] Thread de background encerrada.
+2026-05-19 15:12:04 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:12:04 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:12:04 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:12:05 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-19 15:12:05 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-19 15:12:05 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] PID      : 32748 (PPID=36760)
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-19 15:12:05 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-19 15:12:05 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-19 15:12:05 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-19 15:12:05 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-19 15:12:05 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=424)
+2026-05-19 15:14:02 | INFO     | core.routers.patients | Paciente atualizado: id=1
+2026-05-19 15:15:35 | INFO     | core.routers.patients | Paciente criado: id=2 cpf=712.341.922-54
+2026-05-19 15:17:16 | INFO     | core.routers.doctors | Médico criado: id=2 crm=2411034
