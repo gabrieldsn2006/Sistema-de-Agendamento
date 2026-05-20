@@ -157,24 +157,24 @@ function renderTable(appointments) {
     const cfg = STATUS_CONFIG[a.status] || STATUS_CONFIG.scheduled
     const dt  = formatDatetime(a.scheduled_at)
     return `
-      <tr>
-        <td><span class="badge-id">#${a.id}</span></td>
-        <td><strong>${escHtml(a.patient.name)}</strong></td>
-        <td>${escHtml(a.doctor.name)}</td>
-        <td><span class="badge-specialty">${escHtml(a.doctor.specialty)}</span></td>
-        <td>
+      <tr style="background: var(--bg);">
+        <td style="background: var(--bg);"><span class="badge-id">#${a.id}</span></td>
+        <td style="background: var(--bg);"><strong>${escHtml(a.patient.name)}</strong></td>
+        <td style="background: var(--bg);">${escHtml(a.doctor.name)}</td>
+        <td style="background: var(--bg);"><span class="badge-specialty">${escHtml(a.doctor.specialty)}</span></td>
+        <td style="background: var(--bg);">
           <div style="font-weight:600">${dt.date}</div>
           <div style="font-size:.8rem;color:var(--muted)">${dt.time}</div>
         </td>
-        <td>
+        <td style="background: var(--bg);">
           <span class="badge-status" style="background:${cfg.bg};color:${cfg.color}">
             ${cfg.label}
           </span>
         </td>
-        <td style="max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:.82rem">
+        <td style="background: var(--bg); max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:.82rem">
           ${escHtml(a.notes || '—')}
         </td>
-        <td>
+        <td style="background: var(--bg);">
           <div class="d-flex gap-1">
             <button class="btn-edit" data-id="${a.id}">✏️ Editar</button>
             <button class="btn-danger-custom" data-del-id="${a.id}">🗑️</button>

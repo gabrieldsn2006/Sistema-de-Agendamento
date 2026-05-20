@@ -164,21 +164,21 @@ async function loadFiles() {
       const downloadUrl = `${API_BASE}${f.download_url}`
 
       return `
-        <tr>
-          <td>
+        <tr style="background: var(--bg);">
+          <td style="background: var(--bg);">
             <div class="d-flex align-items-center gap-2">
               <span style="font-size:1.2rem">${icon}</span>
               <span style="font-size:.82rem;font-family:monospace;color:var(--muted)">${escHtml(f.nome)}</span>
             </div>
           </td>
-          <td>
+          <td style="background: var(--bg);">
             <span class="badge-status" style="background:${isPdf ? 'rgba(239,68,68,.15)' : 'rgba(34,197,94,.15)'};color:${color}">
               ${f.tipo}
             </span>
           </td>
-          <td style="color:var(--muted);font-size:.875rem">${f.tamanho_kb} KB</td>
-          <td style="color:var(--muted);font-size:.82rem">${date}</td>
-          <td>
+          <td style="background: var(--bg); color:var(--muted);font-size:.875rem">${f.tamanho_kb} KB</td>
+          <td style="background: var(--bg); color:var(--muted);font-size:.82rem">${date}</td>
+          <td style="background: var(--bg);">
             <a href="${downloadUrl}" target="_blank" download="${escHtml(f.nome)}"
                class="btn-edit" style="text-decoration:none">
               ⬇️ Baixar

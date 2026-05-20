@@ -178,3 +178,60 @@
 2026-05-19 18:22:13 | INFO     | reports.csv_report | [CSV] Gerado: relatorio_geral_20260519_212213.csv (393 bytes, 1 registros)
 2026-05-19 18:26:06 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=af2ddab5 médico='Dr Healer Demon'
 2026-05-19 18:26:07 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Healer_Demon_20260519_212607.pdf (2 KB, 0 consultas)
+2026-05-20 10:06:05 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:06:05 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:06:05 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:06:06 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:06:06 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:06:06 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] PID      : 43284 (PPID=47564)
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-20 10:06:06 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-20 10:06:06 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-20 10:06:06 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-20 10:06:06 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-20 10:06:06 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=40000)
+2026-05-20 10:31:50 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-20 10:33:58 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:33:58 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:33:58 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:33:59 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:33:59 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:33:59 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] PID      : 28272 (PPID=16448)
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-20 10:33:59 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-20 10:33:59 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-20 10:33:59 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-20 10:33:59 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-20 10:33:59 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=19532)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-20 10:34:38 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] PID      : 11352 (PPID=38264)
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-20 10:34:38 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-20 10:34:38 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-20 10:34:38 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-20 10:34:38 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-20 10:34:38 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=45100)
+2026-05-20 10:35:14 | INFO     | reports.report_service | [RELATÓRIO] CSV enfileirado: task_id=adcff14c, 1 registros
+2026-05-20 10:35:14 | INFO     | reports.csv_report | [CSV] Gerado: relatorio_geral_20260520_133514.csv (393 bytes, 1 registros)
+2026-05-20 10:35:35 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=022c94c2 médico='Dr Healer Demon'
+2026-05-20 10:35:35 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Healer_Demon_20260520_133535.pdf (2 KB, 0 consultas)
+2026-05-20 10:35:53 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=2ccb4bb0 médico='Dr. Eduardo Gouveia Farias'
+2026-05-20 10:35:53 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Eduardo_Gouveia_Farias_20260520_133553.pdf (2 KB, 1 consultas)
+2026-05-20 10:37:24 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=ba2421c0 médico='Dr. Eduardo Gouveia Farias'
+2026-05-20 10:37:24 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Eduardo_Gouveia_Farias_20260520_133724.pdf (2 KB, 1 consultas)

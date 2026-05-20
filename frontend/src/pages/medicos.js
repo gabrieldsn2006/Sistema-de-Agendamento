@@ -110,14 +110,14 @@ function renderTable(doctors) {
   }
 
   tbody.innerHTML = doctors.map(d => `
-    <tr>
-      <td><span class="badge-id">#${d.id}</span></td>
-      <td><strong>${escHtml(d.name)}</strong></td>
-      <td class="cpf-cell">${escHtml(d.crm)}</td>
-      <td><span class="badge-specialty">${escHtml(d.specialty)}</span></td>
-      <td>${escHtml(d.phone)}</td>
-      <td class="text-muted">${escHtml(d.email || '—')}</td>
-      <td>
+    <tr style="background: var(--bg);">
+      <td style="background: var(--bg);"><span class="badge-id">#${d.id}</span></td>
+      <td style="background: var(--bg);"><strong>${escHtml(d.name)}</strong></td>
+      <td class="cpf-cell" style="background: var(--bg);">${escHtml(d.crm)}</td>
+      <td style="background: var(--bg);"><span class="badge-specialty">${escHtml(d.specialty)}</span></td>
+      <td style="background: var(--bg);">${escHtml(d.phone)}</td>
+      <td class="text-muted" style="background: var(--bg);">${escHtml(d.email || '—')}</td>
+      <td style="background: var(--bg);">
         <div class="d-flex gap-1">
           <button class="btn-edit" data-id="${d.id}">✏️ Editar</button>
           <button class="btn-danger-custom" data-del-id="${d.id}" data-del-name="${escAttr(d.name)}">🗑️</button>
