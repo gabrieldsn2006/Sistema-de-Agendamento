@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedAgenda — Relatórios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-navbar">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+          <span class="logo-dot"></span>
+          MedAgenda
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/">Pacientes</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/medicos.html">Médicos</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/consultas.html">Consultas</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item active" href="/relatorios.html">Relatórios</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-xl py-4">
+
+      <!-- PAGE HEADER -->
+      <div class="mb-4">
+        <h1 class="page-title mb-1">Central de <span class="text-accent">Relatórios</span></h1>
+        <p class="text-muted mb-0 small">Gere e baixe relatórios em PDF e CSV</p>
+      </div>
+
+      <!-- GERAÇÃO -->
+      <div class="row g-3 mb-4">
+
+        <!-- CSV Geral -->
+        <div class="col-md-6">
+          <div class="report-card">
+            <div class="report-card-icon" style="background:rgba(34,197,94,.12);color:#22c55e">📊</div>
+            <div class="flex-grow-1">
+              <div class="report-card-title">Relatório Geral — CSV</div>
+              <div class="report-card-desc">Exporta todas as consultas do sistema em formato CSV, compatível com Excel.</div>
+            </div>
+            <button class="btn btn-primary-custom" id="btn-csv" onclick="generateCSV()">
+              Gerar CSV
+            </button>
+          </div>
+          <!-- Progress CSV -->
+          <div class="progress-area d-none" id="csv-progress">
+            <div class="d-flex align-items-center gap-2 text-muted small">
+              <div class="spinner-border spinner-border-sm text-accent"></div>
+              <span id="csv-progress-msg">Gerando relatório…</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PDF por Médico -->
+        <div class="col-md-6">
+          <div class="report-card">
+            <div class="report-card-icon" style="background:rgba(239,68,68,.12);color:#ef4444">📄</div>
+            <div class="flex-grow-1">
+              <div class="report-card-title">Relatório por Médico — PDF</div>
+              <div class="report-card-desc">Gera um PDF com todas as consultas de um médico específico.</div>
+            </div>
+            <button class="btn btn-primary-custom" id="btn-pdf" onclick="openPdfModal()">
+              Gerar PDF
+            </button>
+          </div>
+          <!-- Progress PDF -->
+          <div class="progress-area d-none" id="pdf-progress">
+            <div class="d-flex align-items-center gap-2 text-muted small">
+              <div class="spinner-border spinner-border-sm text-accent"></div>
+              <span id="pdf-progress-msg">Gerando relatório…</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ARQUIVOS GERADOS -->
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h5 class="syne mb-0" style="font-size:1.1rem">Arquivos Gerados</h5>
+        <button class="btn btn-outline-custom btn-sm" onclick="loadFiles()">↺ Atualizar</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr>
+              <th>Arquivo</th>
+              <th>Tipo</th>
+              <th>Tamanho</th>
+              <th>Gerado em</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody id="files-tbody">
+            <tr>
+              <td colspan="5" class="text-center py-4 text-muted">
+                <div class="spinner-border spinner-border-sm text-accent me-2"></div>
+                Carregando arquivos…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <!-- MODAL SELECIONAR MÉDICO -->
+    <div class="modal fade" id="pdfModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title syne">Selecionar Médico</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label custom-label">Médico *</label>
+            <select class="form-select custom-input" id="f-doctor-pdf">
+              <option value="">Carregando médicos…</option>
+            </select>
+            <p class="text-muted small mt-2 mb-0">O PDF será gerado com todas as consultas deste médico.</p>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary-custom" id="submit-pdf-btn" onclick="generatePDF()">Gerar PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container"></div>
+
+    <script type="module" src="/src/relatorios.js"></script>
+  </body>
+</html>

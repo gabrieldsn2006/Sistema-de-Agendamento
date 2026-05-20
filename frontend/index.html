@@ -1,13 +1,167 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>MedAgenda — Sistema de Agendamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div id="app"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-navbar">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+          <span class="logo-dot"></span>
+          MedAgenda
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item"><a class="nav-link nav-pill-item active" href="/">Pacientes</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/medicos.html">Médicos</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/consultas.html">Consultas</a></li>
+            <li class="nav-item"><a class="nav-link nav-pill-item" href="/relatorios.html">Relatórios</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main class="container-xl py-4">
+
+      <!-- PAGE HEADER -->
+      <div class="d-flex align-items-end justify-content-between mb-4 flex-wrap gap-3">
+        <div>
+          <h1 class="page-title mb-1">Gestão de <span class="text-accent">Pacientes</span></h1>
+          <p class="text-muted mb-0 small">Cadastre, edite e gerencie os pacientes do sistema</p>
+        </div>
+        <button class="btn btn-primary-custom" id="btn-novo">
+          <span>＋</span> Novo Paciente
+        </button>
+      </div>
+
+      <!-- STATS -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Total de Pacientes</div>
+            <div class="stat-value text-accent" id="stat-total">—</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-label">Último Cadastro</div>
+            <div class="stat-value-sm" id="stat-last">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEARCH BAR -->
+      <div class="d-flex gap-2 mb-3">
+        <div class="search-wrap flex-grow-1">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="form-control custom-input ps-5" id="search" placeholder="Buscar por nome ou CPF…" />
+        </div>
+        <button class="btn btn-outline-custom" id="btn-refresh">↺ Atualizar</button>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-wrap">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Telefone</th>
+              <th>E-mail</th>
+              <th>Nascimento</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="patients-tbody">
+            <tr id="loading-row">
+              <td colspan="7" class="text-center py-4 text-muted">
+                <div class="spinner-border spinner-border-sm text-accent me-2"></div>
+                Carregando pacientes…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <!-- MODAL CRIAR / EDITAR -->
+    <div class="modal fade" id="formModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title syne" id="modal-title">Novo Paciente</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="patient-form">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label custom-label">Nome completo *</label>
+                  <input type="text" class="form-control custom-input" id="f-name"
+                    placeholder="Maria da Silva" required minlength="3" maxlength="120" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label custom-label">CPF *</label>
+                  <input type="text" class="form-control custom-input" id="f-cpf"
+                    placeholder="000.000.000-00" required maxlength="14" />
+                  <small class="text-muted">Formato: 000.000.000-00</small>
+                </div>
+                <div class="col-6">
+                  <label class="form-label custom-label">Telefone *</label>
+                  <input type="text" class="form-control custom-input" id="f-phone"
+                    placeholder="(85) 91234-5678" required maxlength="20" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label custom-label">E-mail</label>
+                  <input type="email" class="form-control custom-input" id="f-email"
+                    placeholder="maria@email.com" />
+                </div>
+                <div class="col-6">
+                  <label class="form-label custom-label">Data de Nascimento *</label>
+                  <input type="date" class="form-control custom-input" id="f-birth" required />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary-custom" id="submit-btn">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CONFIRMAR EXCLUSÃO -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content custom-modal text-center">
+          <div class="modal-body py-4">
+            <div class="fs-1 mb-2">🗑️</div>
+            <h6 class="syne mb-1" id="confirm-name">—</h6>
+            <p class="text-muted small mb-0">Essa ação não pode ser desfeita.</p>
+          </div>
+          <div class="modal-footer border-0 justify-content-center gap-2 pt-0">
+            <button class="btn btn-outline-custom btn-sm" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-danger-custom btn-sm" id="confirm-delete-btn">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container"></div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

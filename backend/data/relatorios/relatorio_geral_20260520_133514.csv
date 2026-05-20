@@ -1,0 +1,8 @@
+﻿# Sistema de Agendamento de Consultas Médicas
+# Relatório Geral de Consultas
+# Gerado em: 20/05/2026 10:35
+# Total de registros: 1
+# SO: Windows | Encoding: utf-8-sig
+
+ID,Data/Hora,Status,Paciente,CPF,Médico,CRM,Especialidade,Observações
+1,19/12/2026 23:00,scheduled,Vectro Lenz,712.341.922-54,Dr. Eduardo Gouveia Farias,2411034,Odonto,paciente relatou diversas dores de dente
