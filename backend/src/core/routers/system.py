@@ -23,7 +23,7 @@ router = APIRouter(prefix="/system", tags=["Sistema (SO)"])
 settings = get_settings()
 
 
-@router.get("/info", tags=["Sistema"])
+@router.get("/info", tags=["Sistema (SO)"])
 async def system_info_full():
     """
     Expõe informações completas do SO e ambiente.
@@ -32,7 +32,7 @@ async def system_info_full():
     return settings.info()
 
 
-@router.get("/threads", tags=["Sistema"])
+@router.get("/threads", tags=["Sistema (SO)"])
 async def system_threads():
     """
     Estado das threads em execução e locks de sincronização.
@@ -45,7 +45,7 @@ async def system_threads():
     }
 
 
-@router.get("/cache", tags=["Sistema"])
+@router.get("/cache", tags=["Sistema (SO)"])
 async def system_cache_stats():
     """
     Estatísticas do cache em memória (hits, misses, TTL).
@@ -57,7 +57,7 @@ async def system_cache_stats():
     }
 
 
-@router.get("/permissions", tags=["Sistema"])
+@router.get("/permissions", tags=["Sistema (SO)"])
 async def system_permissions():
     """
     Verifica permissões nos diretórios de dados do sistema.
@@ -92,7 +92,7 @@ async def system_permissions():
     }
 
 
-@router.post("/backup", status_code=status.HTTP_202_ACCEPTED, tags=["Sistema"])
+@router.post("/backup", status_code=status.HTTP_202_ACCEPTED, tags=["Sistema (SO)"])
 async def system_backup():
     """
     Dispara backup do banco de dados em background.
@@ -107,7 +107,7 @@ async def system_backup():
     }
 
 
-@router.post("/cleanup", status_code=status.HTTP_202_ACCEPTED, tags=["Sistema"])
+@router.post("/cleanup", status_code=status.HTTP_202_ACCEPTED, tags=["Sistema (SO)"])
 async def system_cleanup():
     """
     Dispara limpeza de cache expirado em background.
@@ -122,7 +122,7 @@ async def system_cleanup():
     }
 
 
-@router.get("/task/{task_id}", tags=["Sistema"])
+@router.get("/task/{task_id}", tags=["Sistema (SO)"])
 async def system_task_result(task_id: str):
     """
     Consulta o resultado de uma tarefa de sistema (backup, cleanup, etc).
