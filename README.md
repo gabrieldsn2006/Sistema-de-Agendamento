@@ -2,6 +2,10 @@
 
 > Um sistema CRUD completo de agendamento de consultas médicas que demonstra conceitos fundamentais de **Sistemas Operacionais**, desenvolvido como trabalho para a disciplina de S.O.
 
+## Link para o Repositório
+
+https://github.com/gabrieldsn2006/Sistema-de-Agendamento
+
 ## 📋 Visão Geral
 
 Este projeto implementa uma aplicação full-stack para gerenciamento de agendamentos médicos, integrando conceitos-chave de Sistemas Operacionais como concorrência, sincronização, gerência de memória, manipulação de arquivos e I/O assíncrono.

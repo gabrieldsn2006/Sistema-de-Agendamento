@@ -251,3 +251,61 @@
 2026-05-24 12:46:34 | INFO     | main | Tabelas criadas/verificadas com sucesso.
 2026-05-24 12:46:34 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
 2026-05-24 12:46:34 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=69696)
+2026-05-26 10:22:58 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:22:58 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:22:58 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:22:59 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:22:59 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:22:59 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] PID      : 87856 (PPID=35848)
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-26 10:22:59 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-26 10:22:59 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-26 10:22:59 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-26 10:22:59 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-26 10:22:59 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=73696)
+2026-05-26 10:23:08 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-26 10:24:09 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:24:09 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:24:09 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:24:10 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:24:10 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:24:10 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] PID      : 59484 (PPID=80828)
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-26 10:24:10 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-26 10:24:10 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-26 10:24:10 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-26 10:24:10 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-26 10:24:10 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=77016)
+2026-05-26 10:26:00 | INFO     | core.routers.appointments | Consulta criada: id=2 doctor=1 patient=2 at=2026-05-26 22:25:00-03:00
+2026-05-26 10:26:07 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=3cbd9d2c médico='Dr Healer Demon'
+2026-05-26 10:26:08 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Healer_Demon_20260526_132608.pdf (2 KB, 1 consultas)
+2026-05-26 10:27:20 | INFO     | reports.report_service | [RELATÓRIO] PDF enfileirado: task_id=17d2fbdf médico='Dr. Eduardo Gouveia Farias'
+2026-05-26 10:27:20 | INFO     | reports.pdf_report | [PDF] Gerado: relatorio_medico_Dr_Eduardo_Gouveia_Farias_20260526_132720.pdf (2 KB, 1 consultas)
+2026-05-26 10:28:37 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-26 10:28:37 | INFO     | concorrencia.workers | [WORKER] Thread de background encerrada.
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'appointments' iniciado (limpeza a cada 60s)
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'doctors' iniciado (limpeza a cada 120s)
+2026-05-26 10:33:24 | DEBUG    | storage.cache | [CACHE] Cache 'patients' iniciado (limpeza a cada 120s)
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] Sistema  : Windows 10
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] Máquina  : AMD64
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] PID      : 86128 (PPID=68800)
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] CPUs     : 12
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] Encoding : utf-8
+2026-05-26 10:33:24 | INFO     | config.platform_info | [SO] Sep path : '\'
+2026-05-26 10:33:24 | INFO     | main | Banco de dados : sqlite:///D:\study\Sistema-de-Agendamento\backend\data\agendamento.db
+2026-05-26 10:33:24 | INFO     | main | Tabelas criadas/verificadas com sucesso.
+2026-05-26 10:33:24 | INFO     | concorrencia.workers | [WORKER] Thread de background iniciada: BackgroundWorker
+2026-05-26 10:33:24 | INFO     | concorrencia.workers | [WORKER] Thread daemon iniciada: BackgroundWorker (id=86620)
+2026-05-26 10:36:54 | INFO     | main | Encerrando sistema de agendamento.
+2026-05-26 10:36:54 | INFO     | concorrencia.workers | [WORKER] Thread de background encerrada.
