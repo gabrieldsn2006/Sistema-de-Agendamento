@@ -125,7 +125,7 @@ function renderTable(patients) {
     <tr style="background: var(--bg);">
       <td style="background: var(--bg);"><span class="badge-id">#${p.id}</span></td>
       <td style="background: var(--bg);"><strong>${escHtml(p.name)}</strong></td>
-      <td class="cpf-cell" style="background: var(--bg);"><|>${escHtml(p.cpf)}</td>
+      <td class="cpf-cell" style="background: var(--bg);">${escHtml(p.cpf)}</td>
       <td style="background: var(--bg);">${escHtml(p.phone)}</td>
       <td class="text-muted" style="background: var(--bg);">${escHtml(p.email || '—')}</td>
       <td style="background: var(--bg);">${formatDate(p.birth_date)}</td>
